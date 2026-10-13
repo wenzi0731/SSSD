@@ -1,5 +1,11 @@
 # Diffusion-based Time Series Imputation and Forecasting with Structured State Space Models
 
+## HEEW baseline8 adaptation
+
+For conditional joint Electricity/Heat/Cooling/PV generation, six-configuration
+validation tuning and baseline5-aligned outputs, see [README_BASELINE8.md](README_BASELINE8.md).
+The original source and experiments below remain unchanged.
+
 
 This is the official repository for the paper [Diffusion-based Time Series Imputation and Forecasting with Structured State Space Models](https://openreview.net/forum?id=hHiIbk7ApW&referrer=%5BTMLR%5D(%2Fgroup%3Fid%3DTMLR)) <ins>accepted by TMLR</ins> . In combination with (conditional) diffusion and state-space models, we put forward diverse algorithms, particualary, we propose the generative model $`SSSD^{S4}`$, which is suited to capture long-term dependencies and demonstrates ***state-of-the-art*** results in time series across diverse missing scenarios and datasets. 
 

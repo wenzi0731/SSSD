@@ -1,0 +1,44 @@
+run:
+  name: sssd_joint
+  seed: 42
+  device: auto
+  output_root: experiments/baseline8
+data:
+  energy_path: Data/CN03_energy_cleaned.csv
+  weather_path: Data/weather_cleaned.csv
+  weather_feature_set: pv10
+  seq_len: 24
+  num_workers: 0
+model:
+  num_res_layers: 4
+  res_channels: 64
+  skip_channels: 64
+  diffusion_step_embed_dim_in: 128
+  diffusion_step_embed_dim_mid: 512
+  diffusion_step_embed_dim_out: 512
+  s4_lmax: 24
+  s4_d_state: 64
+  s4_dropout: 0.0
+  s4_bidirectional: true
+  s4_layernorm: true
+diffusion:
+  num_steps: 200
+  beta_start: 0.0001
+  beta_end: 0.02
+  schedule: linear
+training:
+  epochs: 300
+  batch_size: 16
+  learning_rate: 0.0002
+  betas: [0.9, 0.999]
+  gradient_clip: 1.0
+  ema_decay: 0.0
+  val_every: 5
+  early_stopping_patience: 12
+evaluation:
+  batch_size: 8
+  sample_chunk_size: 32
+  val_scenarios: 20
+  test_scenarios: 100
+  precision_recall_k: 5
+  max_precision_samples: 10000

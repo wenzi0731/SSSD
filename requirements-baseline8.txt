@@ -1,0 +1,12 @@
+# Python >=3.10. Retain your existing CUDA-compatible PyTorch >=2.0.
+# No Lightning, wandb, PyKeOps or Cauchy CUDA compilation is required.
+torch>=2.0
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2
+matplotlib>=3.6
+PyYAML>=6.0
+einops>=0.6
+opt_einsum>=3.3
+pytest>=7.0

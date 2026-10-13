@@ -1,0 +1,14 @@
+# 3 residual widths x 2 learning rates, all else fixed. No test-set selection.
+configurations:
+  - id: c01_c32_lr2e4
+    overrides: {model.res_channels: 32, training.learning_rate: 0.0002}
+  - id: c02_c64_lr2e4
+    overrides: {model.res_channels: 64, training.learning_rate: 0.0002}
+  - id: c03_c128_lr2e4
+    overrides: {model.res_channels: 128, training.learning_rate: 0.0002}
+  - id: c04_c32_lr1e3
+    overrides: {model.res_channels: 32, training.learning_rate: 0.001}
+  - id: c05_c64_lr1e3
+    overrides: {model.res_channels: 64, training.learning_rate: 0.001}
+  - id: c06_c128_lr1e3
+    overrides: {model.res_channels: 128, training.learning_rate: 0.001}
